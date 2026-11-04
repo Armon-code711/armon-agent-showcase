@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <meta name="description" content="Armon AI Assistant phân tích link bài viết và video, chắt lọc luận điểm, đối chiếu nguồn và trả lời khách quan.">
+  <meta name="theme-color" content="#f4f7f4">
+  <title>Armon AI Assistant · Agent phân tích nội dung</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./layout.css">
+  <link rel="stylesheet" href="./armon.css">
+  <script src="./armon.js" defer></script>
+</head>
+<body class="armon-page">
+  <main class="document">
+    <header class="armon-header">
+      <a class="back-link" href="./index.html">← Danh sách Agent</a>
+      <div class="armon-brand"><span class="armon-mark">A</span><span>HỒ SƠ AGENT · BẢN TRƯNG BÀY CÔNG KHAI</span></div>
+      <h1>Armon AI Assistant</h1>
+      <p class="subtitle">Agent phân tích nội dung từ link bài viết và video</p>
+      <p class="intro-line">Biến nội dung dài thành bản tóm tắt có trọng tâm, bám nguồn và dễ kiểm tra.</p>
+      <div class="hero-tags"><span>Phân tích link</span><span>Tiếng Việt / English</span><span>Khách quan, có căn cứ</span></div>
+      <div class="armon-callout"><strong>Đây là trang trưng bày tĩnh.</strong> Demo bên dưới dùng câu trả lời viết sẵn; không kết nối Hermes, Lark hay API, không nhận lệnh của khách và không lưu dữ liệu.</div>
+    </header>
+
+    <nav class="profile-nav armon-nav" aria-label="Điều hướng trang Armon">
+      <a href="#nang-luc">Năng lực</a><a href="#demo">Demo mô phỏng</a><a href="#quy-trinh">Quy trình</a><a href="#gioi-han">Giới hạn</a>
+    </nav>
+
+    <section id="nang-luc">
+      <p class="kicker">01 · Định nghĩa công việc</p>
+      <h2>Nó là gì</h2>
+      <div class="definition callout"><p><strong>Một câu:</strong> Khi nhận link bài viết hoặc video cùng mục tiêu cần làm rõ, Armon kiểm tra link, phân tích nội dung truy cập được, chắt lọc luận điểm và bằng chứng, đối chiếu lại với nguồn rồi trả bản tóm tắt khách quan bằng tin nhắn Lark.</p></div>
+      <p>Khi được yêu cầu rà soát tin mới, Armon ưu tiên công nghệ, game và nội dung hài bằng tiếng Việt hoặc tiếng Anh; có thể chọn tối đa 5 tin nổi bật. Chủ đề được nhắc lại nhiều cho thấy mức độ chú ý, nhưng không tự chứng minh thông tin là đúng.</p>
+    </section>
+
+    <section>
+      <p class="kicker">02 · Giá trị công việc</p>
+      <h2>Tiết kiệm được công sức gì</h2>
+      <table><thead><tr><th>Trước đây</th><th>Với Armon</th><th>Đo lường</th></tr></thead><tbody>
+        <tr><td>Tự mở link, xem/đọc, tìm ý chính, xét mức liên quan, soạn và đối chiếu kết quả.</td><td>Gửi link kèm mục tiêu; Agent xử lý nội dung và gửi bản tóm tắt vào cuộc trò chuyện đã cấu hình.</td><td>Quy trình thủ công ước tính 11 thao tác × 1–5 phút = khoảng <strong>11–55 phút/link</strong>.</td></tr>
+        <tr><td>Thời gian đọc và tổng hợp tùy độ dài, khả năng truy cập và độ phức tạp nguồn.</td><td>Armon giúp giảm việc đọc/xem từng phần và tự sắp xếp luận điểm.</td><td><strong>Thời gian chạy thực tế của Agent chưa được đo</strong>; chưa tuyên bố số phút tiết kiệm.</td></tr>
+      </tbody></table>
+    </section>
+
+    <section>
+      <p class="kicker">03 · Công cụ và vai trò</p>
+      <h2>Đã dùng công cụ gì</h2>
+      <div class="tool-list">
+        <article class="tool"><span class="tool-mark codex">C</span><div><h3>Codex</h3><p>Hỗ trợ xây dựng Profile, quy trình, tiêu chuẩn và trang giới thiệu này.</p></div></article>
+        <article class="tool"><span class="tool-mark hermes">H</span><div><h3>Hermes</h3><p>Profile riêng của Armon lưu mục tiêu, quy trình phân tích, chất lượng và xử lý ngoại lệ. Trạng thái tiến trình trực tiếp chưa được kiểm tra ở trang này.</p></div></article>
+        <article class="tool"><span class="tool-mark lark">L</span><div><h3>Lark / Feishu</h3><p>Kênh dự kiến trả lời dưới dạng tin nhắn. Trang trưng bày không kết nối Lark API và không có quyền gọi bot.</p></div></article>
+        <article class="tool"><span class="tool-mark web">↗</span><div><h3>Feishu CLI</h3><p>Chưa xác minh CLI đã được cài, xác thực hay nối vào luồng Armon; không tuyên bố là công cụ đang chạy.</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <p class="kicker">04 · Đầu vào</p>
+      <h2>Armon cần gì để làm việc</h2>
+      <table><thead><tr><th>Đầu vào</th><th>Nội dung</th><th>Định dạng / nguồn</th></tr></thead><tbody>
+        <tr><td>Link bài viết hoặc video</td><td>Nội dung cần đọc, xem hoặc phân tích</td><td>URL từ mạng xã hội, Google hay nguồn web người dùng gửi</td></tr>
+        <tr><td>Mục tiêu cần làm rõ</td><td>Vấn đề, ý tưởng hoặc mối liên hệ với công việc freelance/edit video</td><td>Tin nhắn văn bản; cần hỏi lại nếu chưa cụ thể</td></tr>
+        <tr><td>Yêu cầu rà soát tin (tùy chọn)</td><td>Chủ đề, ngôn ngữ hoặc số lượng tin mong muốn</td><td>Mặc định: công nghệ, game, hài; tiếng Việt và tiếng Anh; tối đa 5 tin</td></tr>
+      </tbody></table>
+    </section>
+
+    <section>
+      <p class="kicker">05 · Quy trình Agent</p>
+      <h2 id="quy-trinh">Armon xử lý như thế nào</h2>
+      <ol class="workflow">
+        <li><span class="rule must">MUST</span><span>Làm rõ mục tiêu và vấn đề cần tìm; hỏi người dùng nếu mục tiêu chưa rõ, không tự đoán.</span></li>
+        <li><span class="rule must">MUST</span><span>Kiểm tra cấu trúc URL, khả năng truy cập, loại nguồn và mức liên quan; chỉ sửa link khi có căn cứ.</span></li>
+        <li><span class="rule must">MUST</span><span>Đọc bài viết hoặc trích xuất lời nói/phụ đề nhận diện được từ video; nêu rõ phần không truy cập hoặc không nghe được.</span></li>
+        <li><span class="rule must">MUST</span><span>Xác định vấn đề chính, luận điểm và thông tin hỗ trợ; giữ ý phụ khi liên quan và củng cố ý chính một cách logic.</span></li>
+        <li><span class="rule should">SHOULD</span><span>Cân nhắc các luồng ý kiến liên quan; đánh giá logic, tính nhất quán, bằng chứng và góc nhìn tác giả.</span></li>
+        <li><span class="rule must">MUST</span><span>Soạn rõ ràng, trung lập; tách thông tin nguồn khỏi nhận định, cảm xúc, suy luận và điểm chưa xác minh.</span></li>
+        <li><span class="rule must">MUST</span><span>Đối chiếu toàn bộ ý chính với link; bỏ/sửa ý không có căn cứ hoặc kết luận lệch vấn đề trước khi gửi.</span></li>
+        <li><span class="rule must">MUST</span><span>Gửi văn bản kèm nguồn vào cuộc trò chuyện Lark đã cấu hình; dừng và báo lỗi nếu không xác định đúng nơi gửi.</span></li>
+      </ol>
+    </section>
+
+    <section id="demo">
+      <p class="kicker">06 · Xem cách trình bày</p>
+      <h2>Demo mô phỏng</h2>
+      <p>Chọn một tình huống mẫu rồi bấm nút. Nội dung là văn bản dựng sẵn để cho thấy cấu trúc trả lời, không phải kết quả phân tích link thật.</p>
+      <div class="demo-layout">
+        <div class="demo-options" role="group" aria-label="Chọn tình huống mẫu">
+          <button class="demo-option active" type="button" data-sample="video"><strong>🎬 Link video</strong><span>Luận điểm · căn cứ · góc nhìn</span></button>
+          <button class="demo-option" type="button" data-sample="article"><strong>📰 Bài viết</strong><span>Ý chính · liên quan · kiểm chứng</span></button>
+          <button class="demo-option" type="button" data-sample="news"><strong>🌐 Rà soát tin</strong><span>Tối đa 5 nội dung nổi bật</span></button>
+        </div>
+        <div class="demo-window">
+          <div class="demo-top"><span>Armon AI Assistant · Bản xem trước</span><span class="sample-label">MÔ PHỎNG</span></div>
+          <div class="demo-chat"><div id="sample-prompt" class="sample-prompt">Tóm tắt video và nêu rõ góc nhìn của tác giả.</div><div id="sample-answer" class="sample-answer" aria-live="polite"></div></div>
+          <div class="demo-bottom"><span>Không gửi lệnh · Không gọi API · Không lưu đầu vào</span><button id="run-sample" class="run-sample" type="button">Chạy mô phỏng ↻</button></div>
+        </div>
+      </div>
+      <div class="safety-callout"><strong>Giới hạn demo:</strong> Không có ô nhập nội dung hoặc link. Nút bấm chỉ hiển thị một ví dụ được nhúng tại chỗ; khách truy cập không thể gọi Hermes Profile hay bot Lark.</div>
+    </section>
+
+    <section>
+      <p class="kicker">07 · Tiêu chuẩn chất lượng</p>
+      <h2>Thế nào là kết quả tốt</h2>
+      <div class="quality-grid">
+        <article><b>Khớp nguồn</b><p>Ý chính và kết luận phải được link hỗ trợ hoặc được gắn nhãn là nhận định/suy luận/chưa xác minh.</p></article>
+        <article><b>Đúng vấn đề</b><p>Ưu tiên mục tiêu người dùng và mức liên quan; không giữ ý lan man chỉ vì nó dài hoặc phổ biến.</p></article>
+        <article><b>Trung lập</b><p>Quy góc nhìn cho đúng tác giả/nguồn; không trình bày nội dung một phía như sự thật đã xác nhận.</p></article>
+        <article><b>Đối chiếu được</b><p>Bố cục dễ hiểu, có link nguồn, nêu giới hạn truy cập và các điểm cần con người kiểm tra.</p></article>
+      </div>
+    </section>
+
+    <section id="gioi-han">
+      <p class="kicker">08 · Ranh giới năng lực</p>
+      <h2>Được thiết kế để làm — và không làm</h2>
+      <div class="boundary-grid">
+        <article class="boundary-card yes"><h3>✓ Được thiết kế để</h3><ul><li>Phân tích link bài viết/video và tóm tắt ý chính.</li><li>Trích xuất lời/phụ đề nhận diện được để hiểu nội dung video.</li><li>Đánh giá mức liên quan với vấn đề và mục tiêu công việc người dùng.</li><li>Nêu các góc nhìn, căn cứ và phần chưa xác minh.</li><li>Tìm tin nổi bật khi người dùng chủ động yêu cầu.</li></ul></article>
+        <article class="boundary-card no"><h3>× Không được xác nhận làm</h3><ul><li>Phiên âm nguyên văn toàn bộ âm thanh/video hoặc cam kết độ chính xác transcript.</li><li>Biên tập, render, xuất bản video hay tự động thu thập kho âm thanh/hình ảnh.</li><li>Tự quét tin hoặc chạy theo lịch hằng ngày mà không có trigger đã cấu hình.</li><li>Chứng minh sự thật chỉ bằng mức độ phổ biến hay một nguồn duy nhất.</li><li>Cho khách truy cập trang này gửi lệnh đến Agent thật.</li></ul></article>
+      </div>
+      <div class="safety-callout"><strong>Cần con người:</strong> mục tiêu chưa rõ; link riêng tư, hỏng hoặc bị chặn; video thiếu lời/phụ đề; nguồn mâu thuẫn nhưng bằng chứng yếu; không xác định được tác giả; hoặc không xác nhận được đúng cuộc trò chuyện đích.</div>
+    </section>
+
+    <section>
+      <p class="kicker">09 · Cách dùng Agent vận hành</p>
+      <h2>Gửi yêu cầu qua kênh riêng</h2>
+      <ol class="use-steps"><li>Mở cuộc trò chuyện riêng với <strong>Armon AI Assistant</strong> trong Lark.</li><li>Gửi URL cùng một câu nói rõ mục tiêu, ví dụ: “Tóm tắt luận điểm, nêu căn cứ và cho biết nội dung liên quan thế nào đến ý tưởng video của tôi.”</li><li>Đối chiếu phần quan trọng với link; nếu có sai lệch, nêu ý cần kiểm tra lại.</li><li>Nếu link không truy cập được, gửi link khác hoặc phần nội dung/phụ đề cần xem.</li></ol>
+      <p class="status-note"><strong>Trạng thái minh chứng:</strong> trang này không chứa ảnh chụp lần chạy phân tích link gần đây. Demo không phải bằng chứng chạy thực; thời gian xử lý Agent cũng chưa được đo.</p>
+    </section>
+
+    <section>
+      <p class="kicker">10 · Bảo mật trang trưng bày</p>
+      <h2>Chỉ xem — không thể gọi Agent</h2>
+      <p>Đây là trang HTML tĩnh. Chính sách nội dung chặn kết nối mạng từ trang (<code>connect-src 'none'</code>), không có biểu mẫu, API key, webhook, dữ liệu chat riêng hoặc cấu hình chạy Hermes. Khách chỉ tương tác với các kịch bản minh họa có sẵn.</p>
+    </section>
+
+    <footer class="page-footer"><p>Armon AI Assistant · Agent phân tích nội dung</p><p><a href="./index.html">← Danh sách Agent</a> · Bản giới thiệu tĩnh</p></footer>
+  </main>
+</body>
+</html>

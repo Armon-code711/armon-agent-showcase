@@ -1,0 +1,9 @@
+/* Layout refinements for the AgentFactory-style instruction sheet. */
+.document{overflow:hidden}
+section>p:last-child{margin-bottom:0}
+.definition{font-size:15px;line-height:1.9}
+.tool-list .tool:last-child:nth-child(odd){grid-column:1/-1}
+@media(max-width:640px){
+  .tool-list .tool:last-child:nth-child(odd){grid-column:auto}
+  .workflow li{line-height:1.75}
+}
